@@ -22,7 +22,7 @@ hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
-        
+
         </style>
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
@@ -37,7 +37,7 @@ with file_path.open('rb') as file:
     hashed_passwords=pickle.load(file)
 
 authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
-    "pre_App", "abcdef", cookie_expiry_days=30)
+    "pre_App", "abcdef")#, cookie_expiry_days=30)
 
 name, authentication_status, username = authenticator.login("Login", "main")
 
