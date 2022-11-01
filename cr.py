@@ -37,7 +37,7 @@ with file_path.open('rb') as file:
     hashed_passwords=pickle.load(file)
 
 authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
-    "pre_App", "abcdef")#, cookie_expiry_days=30)
+    "pre_App", '123456')#, cookie_expiry_days=30)
 
 name, authentication_status, username = authenticator.login("Login", "main")
 
