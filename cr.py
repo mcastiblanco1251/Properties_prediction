@@ -15,7 +15,7 @@ plt.style.use('fivethirtyeight')
 from sklearn.metrics import r2_score
 
 #im = Image.open('C:/Users/Mcastiblanco/Documents/AGPC/DataScience2020/Streamlit/Arroz/apps/arroz.png')
-im2 = Image.open('Logo GPR.jpg')
+im2 = Image.open('predictor2.png')
 st.set_page_config(page_title='Pred_App', layout="wide", page_icon=im2)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 hide_menu_style = """
@@ -66,7 +66,8 @@ if authentication_status:
         new_image4=imagelp2.resize((240, 80))
         #st.image(new_image2)
         #st.header('PREDIKTOR')
-
+        #new_image5=imagelp2.resize((120, 40))
+        #st.image(new_image5)
         st.subheader("""
         Predicción Propiedades
         Esta App predice propiedades fisico-químicas según el tipo de crudo a partir de propiedades base!
