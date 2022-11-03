@@ -50,7 +50,9 @@ if authentication_status == None:
     st.warning("Por favor introduzca su username y password")
 
 if authentication_status:
-
+    imagelp2 = Image.open('predictor2.png')
+    new_image5=imagelp2.resize((120, 40))
+    st.image(new_image5)
     row1_1, row1_2,row1_3 = st.columns((1, 2,1))
 
     with row1_1:
@@ -58,12 +60,18 @@ if authentication_status:
         st.image(image, use_column_width=True)
         #st.image(new_image2)
     with row1_2:
+        imagelp = Image.open('predictor.png')
+        imagelp2 = Image.open('predictor2.png')
+        new_image3=imagelp.resize((240, 80))
+        new_image4=imagelp2.resize((240, 80))
         #st.image(new_image2)
-        st.header('PREDIKTOR')
+        #st.header('PREDIKTOR')
+
         st.subheader("""
         Predicción Propiedaddes
         Esta App predice propiedades fisico-químicas según el tipo de crudo a partir de propiedades base!
         """)
+
     with row1_3:
         st.image(new_image2)
         st.markdown('PREDIKTOR App by [GPREnergy](https://www.gprenergy.co/)')
@@ -103,7 +111,8 @@ if authentication_status:
     #st.sidebar.image(new_image, use_column_width=False)
     st.sidebar.header(f" Bienvenido {name}")
     authenticator.logout("Logout", "sidebar")
-
+    #st.sidebar.image(new_image3)
+    #st.sidebar.image(new_image4)
     # st.sidebar.markdown("""
     # [Example CSV input file](penguins_example.csv)
     # """)
