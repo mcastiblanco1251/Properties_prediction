@@ -163,7 +163,7 @@ if authentication_status:
         )
 
         if selected=="Entrada de Archivo" :
-            st.subheader('Parámetros de Entrada Usario desde un Archivo')
+            st.subheader('Parámetros de Entrada Usuario desde un Archivo')
         # Collects user input features into dataframe
             uploaded_file = st.file_uploader("Cargue sus parámetros desde un archivo CSV", type=["csv"])
             if uploaded_file is not None:
