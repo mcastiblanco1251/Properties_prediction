@@ -5,5 +5,5 @@ scikit-learn
 matplotlib
 seaborn
 streamlit_option_menu
-streamlit_authenticator
+streamlit_authenticator==0.1.5
 
