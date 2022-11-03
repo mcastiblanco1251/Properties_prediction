@@ -15,7 +15,7 @@ plt.style.use('fivethirtyeight')
 from sklearn.metrics import r2_score
 
 #im = Image.open('C:/Users/Mcastiblanco/Documents/AGPC/DataScience2020/Streamlit/Arroz/apps/arroz.png')
-im2 = Image.open('cr2.jpg')
+im2 = Image.open('Logo GPR.jpg')
 st.set_page_config(page_title='Pred_App', layout="wide", page_icon=im2)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 hide_menu_style = """
@@ -27,7 +27,7 @@ hide_menu_style = """
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-imagel = Image.open('logo GPR.jpg')
+imagel = Image.open('Logo GPR.jpg')
 new_image = imagel.resize((300, 100))
 new_image2=imagel.resize((300, 150))
 #---- USER AUTHENTICATION
