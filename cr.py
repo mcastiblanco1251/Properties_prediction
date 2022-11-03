@@ -68,7 +68,7 @@ if authentication_status:
         #st.header('PREDIKTOR')
 
         st.subheader("""
-        Predicción Propiedaddes
+        Predicción Propiedades
         Esta App predice propiedades fisico-químicas según el tipo de crudo a partir de propiedades base!
         """)
 
