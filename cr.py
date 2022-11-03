@@ -287,7 +287,7 @@ if authentication_status:
                 #warn_=pd.DataFrame(warn)
                 #warn_.columns=['Aceptación']
                 table['Criterio']=pd.Series(warn)
-            st.session_state.pred=table
+            #st.session_state.pred=table
             #st.write(table)
 
             #result={'Propiedad':prop_+'_Pred'}#, 'Valor_Pred':[str(pre)[1:8]], 'Exactitud-R2 %':round(np.abs(r2_),4)*100}
@@ -302,7 +302,14 @@ if authentication_status:
             st.write('**Tabla Resultados**')#(f' La propiedad **{prop}** es igual a **{str(prediction)[1:8]}** con una extactitud **{round(r2,4)*100}**%')
             #result={'Propiedad':prop[0]+'_Pred', 'Valor_Pred':[str(prediction)[1:8]], 'Exactitud-R2 %':round(np.abs(r2),4)*100}
             #resdf=pd.DataFrame.from_dict(result)
-            st.write(table)
+            #st.write(table)
+
+            def color_survived(val):
+                color = '#5882FA' if val=='Dentro de Rango' else '#FA5858'
+                return f'background-color: {color}'
+
+            st.dataframe(table.style.applymap(color_survived, subset=['Criterio']))
+
 
 
         if selected == 'Visualización':
